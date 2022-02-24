@@ -18,7 +18,7 @@ string scanner(string word, int lineNum){
     if(isalpha(word[0]) && isupper(word[0])){
         bool isalphaNum = true;
         for(int i = 0; i < word.length(); i++){
-            if((isalpha(word[i]) == false) && (isnumber(word[0]) == false)){
+            if((isalpha(word[i]) == false) && (isdigit(word[0]) == false)){
                 for(int k = 0; k < TOTALOPERATORS; k++){
                     if((operatorArray[k] == word[0]) == true){
                         cout << "SCANNER ERROR: " << word << " line num: " << lineNum << endl;
@@ -53,10 +53,10 @@ string scanner(string word, int lineNum){
         cout << tokens[0].tokenID << " : " << tokens[0].tokenInstance << " : " << tokens[0].lineNum << endl;
     }
     //Conditional for numbers (Digit)
-    else if(isnumber(word[0])){
+    else if(isdigit(word[0])){
         bool isNumber = true;
         for(int i = 0; i < word.length(); i++){
-            if(isnumber(word[i]) == false){
+            if(isdigit(word[i]) == false){
                 isNumber = false;
             }
         }
@@ -76,7 +76,7 @@ string scanner(string word, int lineNum){
         cout << tokens[0].tokenID << " : " << tokens[0].tokenInstance << " : " << tokens[0].lineNum << endl;
     }
     //Conditionals for Operators (Operator)
-    else if((isnumber(word[0]) == false) && (isalpha(word[0]) == false)){
+    else if((isdigit(word[0]) == false) && (isalpha(word[0]) == false)){
         //cout << "maybe operator" << endl;
         for(int i = 0; i < TOTALOPERATORS; i++){
             if(word[0] == operatorArray[i]){
