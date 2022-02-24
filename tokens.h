@@ -12,10 +12,21 @@ const string oper = "operatorTK";
 const string comment = "commentTK";
 const string eof = "eofTK";
 
-struct token{
+const int TOTALKEYWORDS = 13;
+const int TOTALOPERATORS = 9;
+string keywordArray[TOTALKEYWORDS] = {"Again","If","Assign","Move","Show","Flip","Name","Home","Do","Spot","Place","Here","There"};
+char operatorArray[TOTALOPERATORS] = {'&', '+', '/', '%', '.','{','}','<', '-'};
+
+struct Token{
     string tokenID;
-    string tokenIstance;
+    string tokenInstance;
     int lineNum;
+
+    Token(string id, string instance, int num){
+        tokenID = id;
+        tokenInstance = instance;
+        lineNum = num;
+    };
 };
 
 

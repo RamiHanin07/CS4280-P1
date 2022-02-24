@@ -8,7 +8,7 @@
 
 using namespace std;
 
-string scanner(string word);
+string scanner(string word, int lineNum);
 
 
 #endif

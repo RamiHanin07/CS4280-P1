@@ -8,7 +8,6 @@
 
 
 #include "testScanner.h"
-#include "scanner.h"
 using namespace std;
 
 
