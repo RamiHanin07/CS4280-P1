@@ -6,6 +6,9 @@
 #include <fstream>
 #include <string>
 
+
+#include "testScanner.h"
+#include "scanner.h"
 using namespace std;
 
 
@@ -32,5 +35,11 @@ int main(int argc, char *argv[]){
             cout << "Error, unidentified argument" << endl;
         }
     }
+
+    cout << fileName << endl;
+
+    //Call testScanner
+    testScan(fileName);
+
     return 0;
 }
